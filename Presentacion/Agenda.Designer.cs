@@ -34,18 +34,18 @@ namespace Presentacion
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Pink;
+            this.panel1.Controls.Add(this.dateTimePicker1);
             this.panel1.Controls.Add(this.button3);
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.monthCalendar1);
             this.panel1.Location = new System.Drawing.Point(-3, 1);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(411, 449);
@@ -99,14 +99,12 @@ namespace Presentacion
             this.label1.TabIndex = 1;
             this.label1.Text = "Escoge La Fecha Que Deseas\r\n        Agendar Tu Cita";
             // 
-            // monthCalendar1
+            // dateTimePicker1
             // 
-            this.monthCalendar1.BackColor = System.Drawing.Color.LightPink;
-            this.monthCalendar1.Font = new System.Drawing.Font("Ravie", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.monthCalendar1.ForeColor = System.Drawing.Color.Crimson;
-            this.monthCalendar1.Location = new System.Drawing.Point(61, 71);
-            this.monthCalendar1.Name = "monthCalendar1";
-            this.monthCalendar1.TabIndex = 0;
+            this.dateTimePicker1.Location = new System.Drawing.Point(61, 87);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(248, 20);
+            this.dateTimePicker1.TabIndex = 6;
             // 
             // Agenda
             // 
@@ -125,10 +123,10 @@ namespace Presentacion
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.MonthCalendar monthCalendar1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
     }
 }

@@ -61,6 +61,11 @@ namespace Presentacion
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel9.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -81,6 +86,10 @@ namespace Presentacion
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Pink;
+            this.panel1.Controls.Add(this.textBox2);
+            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.label5);
+            this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.panel9);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -114,6 +123,7 @@ namespace Presentacion
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.PaleVioletRed;
+            this.panel3.Controls.Add(this.textBox3);
             this.panel3.Controls.Add(this.label2);
             this.panel3.Controls.Add(this.pictureBox6);
             this.panel3.Location = new System.Drawing.Point(8, 7);
@@ -282,7 +292,7 @@ namespace Presentacion
             "Depilación de bikini parcial $15.000"});
             this.comboBox4.Location = new System.Drawing.Point(146, 21);
             this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(121, 21);
+            this.comboBox4.Size = new System.Drawing.Size(132, 21);
             this.comboBox4.TabIndex = 5;
             this.comboBox4.Text = "Depilaciones";
             // 
@@ -335,7 +345,7 @@ namespace Presentacion
             this.panel5.Controls.Add(this.comboBox3);
             this.panel5.Location = new System.Drawing.Point(220, 37);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(156, 134);
+            this.panel5.Size = new System.Drawing.Size(195, 134);
             this.panel5.TabIndex = 8;
             // 
             // button2
@@ -365,11 +375,11 @@ namespace Presentacion
             "Pestañas punto a punto $20.000",
             "Pestaña pelo a pelo $50.000",
             "Lifting de pestañas $50.000"});
-            this.comboBox3.Location = new System.Drawing.Point(17, 59);
+            this.comboBox3.Location = new System.Drawing.Point(0, 59);
             this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(121, 21);
+            this.comboBox3.Size = new System.Drawing.Size(191, 21);
             this.comboBox3.TabIndex = 4;
-            this.comboBox3.Text = "Pestañas";
+            this.comboBox3.Text = "Pestañas punto a punto $20.000";
             // 
             // panel4
             // 
@@ -379,7 +389,7 @@ namespace Presentacion
             this.panel4.ForeColor = System.Drawing.Color.Crimson;
             this.panel4.Location = new System.Drawing.Point(12, 37);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(179, 134);
+            this.panel4.Size = new System.Drawing.Size(202, 134);
             this.panel4.TabIndex = 7;
             // 
             // button1
@@ -394,12 +404,13 @@ namespace Presentacion
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(22, 0);
+            this.pictureBox1.Location = new System.Drawing.Point(44, 0);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(132, 76);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // comboBox1
             // 
@@ -408,11 +419,11 @@ namespace Presentacion
             "Depilación de Cejas  $7.000",
             "Cejas semipermanentes $12.000",
             "Diseño de cejas $20.000"});
-            this.comboBox1.Location = new System.Drawing.Point(33, 81);
+            this.comboBox1.Location = new System.Drawing.Point(0, 82);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
+            this.comboBox1.Size = new System.Drawing.Size(195, 21);
             this.comboBox1.TabIndex = 2;
-            this.comboBox1.Text = "Cejas";
+            this.comboBox1.Text = "Cejas semipermanentes $12.000";
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // label1
@@ -426,6 +437,46 @@ namespace Presentacion
             this.label1.Text = "SERVICIOS";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(12, 64);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(70, 13);
+            this.label4.TabIndex = 2;
+            this.label4.Text = "Identificacion";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(12, 93);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(49, 13);
+            this.label5.TabIndex = 3;
+            this.label5.Text = "Telefono";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(89, 64);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 20);
+            this.textBox1.TabIndex = 4;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(89, 93);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(100, 20);
+            this.textBox2.TabIndex = 5;
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(81, 21);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.ReadOnly = true;
+            this.textBox3.Size = new System.Drawing.Size(100, 20);
+            this.textBox3.TabIndex = 6;
+            // 
             // Servicios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -437,6 +488,7 @@ namespace Presentacion
             this.Text = "Servicios";
             this.Load += new System.EventHandler(this.Servicios_Load);
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.panel9.ResumeLayout(false);
             this.panel9.PerformLayout();
             this.panel3.ResumeLayout(false);
@@ -491,5 +543,10 @@ namespace Presentacion
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox textBox3;
     }
 }

@@ -38,5 +38,26 @@ namespace Presentacion
         {
             labelFecha.Text = DateTime.Now.ToLongDateString();
         }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox2_Validating(object sender, CancelEventArgs e)
+        {
+            bool succes = int.TryParse(txtcontraseña.Text, out int Repuesta);
+            if(!succes)
+            {
+
+                errorProvider1.SetError(txtcontraseña, "Solo valido valores numericos");
+                e.Cancel = true;
+            }
+        }
+
+        private void textBox2_Validated(object sender, EventArgs e)
+        {
+            errorProvider1.SetError(txtcontraseña, "");
+        }
     }
 }

@@ -34,17 +34,19 @@ namespace Presentacion
             this.panel1 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.labelFecha = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtcontraseña = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.labelFecha = new System.Windows.Forms.Label();
             this.Fecha = new System.Windows.Forms.Timer(this.components);
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -78,7 +80,7 @@ namespace Presentacion
             this.panel2.Controls.Add(this.labelFecha);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.label1);
-            this.panel2.Controls.Add(this.textBox2);
+            this.panel2.Controls.Add(this.txtcontraseña);
             this.panel2.Controls.Add(this.textBox1);
             this.panel2.Controls.Add(this.button1);
             this.panel2.Controls.Add(this.pictureBox1);
@@ -87,6 +89,15 @@ namespace Presentacion
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(375, 370);
             this.panel2.TabIndex = 1;
+            // 
+            // labelFecha
+            // 
+            this.labelFecha.AutoSize = true;
+            this.labelFecha.Location = new System.Drawing.Point(153, 12);
+            this.labelFecha.Name = "labelFecha";
+            this.labelFecha.Size = new System.Drawing.Size(35, 13);
+            this.labelFecha.TabIndex = 6;
+            this.labelFecha.Text = "label4";
             // 
             // label2
             // 
@@ -110,12 +121,15 @@ namespace Presentacion
             this.label1.Text = "Usuario";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // textBox2
+            // txtcontraseña
             // 
-            this.textBox2.Location = new System.Drawing.Point(177, 269);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(123, 20);
-            this.textBox2.TabIndex = 3;
+            this.txtcontraseña.Location = new System.Drawing.Point(177, 269);
+            this.txtcontraseña.Name = "txtcontraseña";
+            this.txtcontraseña.Size = new System.Drawing.Size(123, 20);
+            this.txtcontraseña.TabIndex = 3;
+            this.txtcontraseña.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            this.txtcontraseña.Validating += new System.ComponentModel.CancelEventHandler(this.textBox2_Validating);
+            this.txtcontraseña.Validated += new System.EventHandler(this.textBox2_Validated);
             // 
             // textBox1
             // 
@@ -149,19 +163,14 @@ namespace Presentacion
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // labelFecha
-            // 
-            this.labelFecha.AutoSize = true;
-            this.labelFecha.Location = new System.Drawing.Point(153, 12);
-            this.labelFecha.Name = "labelFecha";
-            this.labelFecha.Size = new System.Drawing.Size(35, 13);
-            this.labelFecha.TabIndex = 6;
-            this.labelFecha.Text = "label4";
-            // 
             // Fecha
             // 
             this.Fecha.Enabled = true;
             this.Fecha.Tick += new System.EventHandler(this.Fecha_Tick);
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
             // 
             // Form1
             // 
@@ -177,6 +186,7 @@ namespace Presentacion
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -187,13 +197,14 @@ namespace Presentacion
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtcontraseña;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label labelFecha;
         private System.Windows.Forms.Timer Fecha;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }
 
