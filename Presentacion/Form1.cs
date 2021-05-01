@@ -13,6 +13,7 @@ namespace Presentacion
     public partial class Form1 : Form
     {
         Servicios servicios = new Servicios();
+        Registrar registrar = new Registrar();
         public Form1()
         {
             InitializeComponent();
@@ -58,6 +59,11 @@ namespace Presentacion
         private void textBox2_Validated(object sender, EventArgs e)
         {
             errorProvider1.SetError(txtcontraseña, "");
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            registrar.Show();
         }
     }
 }
