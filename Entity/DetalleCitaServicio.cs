@@ -25,5 +25,6 @@ namespace Entity
             IdCita = idCita;
             IServicio = iServicio;
         }
+
     }
 }

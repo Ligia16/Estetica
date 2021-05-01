@@ -13,10 +13,10 @@ namespace Entity
         public int Cantidad { get; set; }
         public int IdFactura { get; set; }
         public int IServicio { get; set; }
-        public DetalleFacturaServicio()
+        public void DetalleFacturaServicio()
         {
         }
-        public DetalleFacturaServicio(int id, double precio, int cantidad, int idFactura, int iServicio)
+        public void  DetalleFacturaServicio(int id, double precio, int cantidad, int idFactura, int iServicio)
         {
             Id = id;
             this.precio = precio;

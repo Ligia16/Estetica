@@ -10,8 +10,8 @@ namespace Entity
     {
         public Cita()
         {
-            servicios = new List<DetalleFacturaServicio>();
-        }
+                servicios = new List<DetalleFacturaServicio>();
+            }
 
         public int Id { get; set; }
         public DateTime FechaCita { get; set; }

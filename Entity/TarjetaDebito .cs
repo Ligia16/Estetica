@@ -9,24 +9,24 @@ namespace Entity
     class TarjetaDebito: IMetodoPago
     {
         public int Id { get; set; }
-    public double ValorCancelar { get; set; }
-    public string Tipo { get; set; }
+        public double ValorCancelar { get; set; }
+        public string Tipo { get; set; }
 
-    public double Saldo { get; set; }
-    public string EstadoPago { get; set; }
-    public string GenerarPago()
-    {
-        if (Saldo > ValorCancelar)
+        public double Saldo { get; set; }
+        public string EstadoPago { get; set; }
+        public string GenerarPago()
         {
-            EstadoPago = "APROBADO";
-            return "Pago Satisfactorio";
-        }
-        else
-        {
-            EstadoPago = "DESAPROBADO";
-            return "Saldo Insuficiente";
-        }
+            if (Saldo > ValorCancelar)
+            {
+                EstadoPago = "APROBADO";
+                return "Pago Satisfactorio";
+            }
+            else
+            {
+                EstadoPago = "DESAPROBADO";
+                return "Saldo Insuficiente";
+            }
 
+        }
     }
-}
 }
