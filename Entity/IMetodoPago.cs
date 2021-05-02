@@ -12,6 +12,6 @@ namespace Entity
         double ValorCancelar { get; set; }
         string Tipo { get; set; }
         string EstadoPago { get; set; }
-        string GenerarPago();
+        
     }
 }

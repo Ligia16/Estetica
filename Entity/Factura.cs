@@ -33,10 +33,7 @@ namespace Entity
             IdCliente = idCliente;
             servicios = new List<DetalleFacturaServicio>();
         }
-        public void AgregarServicio(DetalleFacturaServicio servicio)
-        {
-            servicios.Add(servicio);
-        }
+       
         public double CalcularTotal()
         {
             double valor = 0;

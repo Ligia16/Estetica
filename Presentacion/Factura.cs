@@ -12,6 +12,7 @@ namespace Presentacion
 {
     public partial class Factura : Form
     {
+        IMetodoPago metodopago = new IMetodoPago();
         public Factura()
         {
             InitializeComponent();
@@ -35,6 +36,21 @@ namespace Presentacion
         private void label2_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void label10_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            metodopago.Show();
         }
     }
 }

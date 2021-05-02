@@ -65,5 +65,10 @@ namespace Presentacion
         {
             registrar.Show();
         }
+
+        private void labelFecha_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
